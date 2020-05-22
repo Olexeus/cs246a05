@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.design.widget.TextInputEditText;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -56,6 +57,9 @@ public class MainActivity extends Activity
                 editor.putString("chapter", chapter);
                 editor.putString("verse", verse);
                 editor.commit();
+
+                Toast.makeText(this, "Saved successfully", Toast.LENGTH_LONG).show();
+
 
                 // Start the activity with our explicit intent
                 if (i.resolveActivity(getPackageManager()) != null) {

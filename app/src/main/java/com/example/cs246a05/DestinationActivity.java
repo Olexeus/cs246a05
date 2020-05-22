@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.example.cs246a05.R;
@@ -31,6 +32,7 @@ public class DestinationActivity extends AppCompatActivity {
 
                 String passedData = book + ": " + chapter + ":" + verse;
                 values.setText(passedData);
+                Log.i("Display: ", ("Received intent with " + passedData));
         }
 
         SharedPreferences sharedPref = getSharedPreferences("quote", Context.MODE_PRIVATE);
@@ -42,5 +44,7 @@ public class DestinationActivity extends AppCompatActivity {
             String passedData = book + ": " + chapter + ":" + verse;
             shared.setText(passedData);
         }
+
+
     }
 }
